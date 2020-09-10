@@ -1,4 +1,4 @@
-class Game < ActiveRecord::Base 
+class Games < ActiveRecord::Base 
     belongs_to :user, class_name: "User"
     validates :title, presence: true
 end
