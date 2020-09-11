@@ -12,6 +12,7 @@ gem 'pry'
 gem 'bcrypt'
 gem 'tux'
 gem 'corneal', '~> 0.1.0'
+gem 'sinatra-flash'
 
 group :development, :test do 
 gem 'dotenv'
