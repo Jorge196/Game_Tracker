@@ -4,4 +4,9 @@ class GamesController < ApplicationController
         @games = Game.all
         erb :"/games/index.html"
     end 
+
+    get "/games/:id" do 
+        @game = Game.find(params[:id])
+        erb :"/games/show.html"
+
 end 
