@@ -13,6 +13,7 @@ gem 'bcrypt'
 gem 'tux'
 gem 'corneal', '~> 0.1.0'
 gem 'sinatra-flash'
+gem 'kill_shotgun'
 
 group :development, :test do 
 gem 'dotenv'
