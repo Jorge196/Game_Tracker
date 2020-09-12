@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    erb :"/user/new"
+    erb :welcome
   end
 
 end
