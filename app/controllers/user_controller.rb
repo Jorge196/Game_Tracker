@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
-    get 'users/new' do 
-        erb :'/users/new'
+    get '/users/new' do 
+        erb :'/user/new'
     end 
 
     post '/users' do 
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
             session[:id] = @user.id 
             redirect "/"
         else 
-            erb :'users/new'
+            erb :'/user/new'
         end 
     end 
 end 
