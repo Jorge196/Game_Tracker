@@ -6,6 +6,7 @@ class GamesController < ApplicationController
     end 
 
     get "/games/new" do 
+        erb :'/games/new'
 
     end 
 
@@ -27,7 +28,7 @@ class GamesController < ApplicationController
     end 
 
     delete "/posts/:id" do 
-        
+
     end 
 
     
