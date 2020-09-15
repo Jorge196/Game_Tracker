@@ -37,16 +37,5 @@
     </div>
   </body>
 
-    <div class="sidebar">
-      <h3>Environment</h3>
-      <ul>
-        <li><b>Ruby:</b> <%= RUBY_VERSION %></li>
-        <li><b>Environment:</b> <%= ENV["RACK_ENV"] %></li>
-        <li><b>Server:</b> <%= @env["SERVER_SOFTWARE"] %></li>
-        <li><b>Port:</b> <%= @env["SERVER_PORT"] %></li>
-        <li><b>Logged In User's Id:</b> <%= session[:id] %></li>
-      </ul>
-    </div>
-
 
 </html>

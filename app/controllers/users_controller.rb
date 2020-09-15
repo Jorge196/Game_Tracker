@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
-    set :views. 'app/views/users'
+    
 
     get '/users/new' do
          
-        erb :new
+        erb :'/user/new'
     end 
 
     post '/users' do 
