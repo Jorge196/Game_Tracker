@@ -1,3 +1,6 @@
-<h1><%= @game.title %></h1>
+<h3><%= @game.title %></h3>
 <p><%= @game.user.email %></p> 
 <p><%= @game.release_year %></p>
+<% if authorize_game(@game) %>
+    <div>
+    <a href="/games/<%= @game.id %>/edit"><button>Edit</button></a> 
