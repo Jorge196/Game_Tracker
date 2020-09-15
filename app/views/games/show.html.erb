@@ -3,4 +3,10 @@
 <p><%= @game.release_year %></p>
 <% if authorize_game(@game) %>
     <div>
-    <a href="/games/<%= @game.id %>/edit"><button>Edit</button></a> 
+        <a href="/games/<%= @game.id %>/edit"><button>Edit</button></a> 
+        <form method="post" action="/games/<%= @game.id %>" style="display: inline-block;">
+            <input type="hidden" name="_method" value="delete" />
+            <input type= "submit" value="Delete" />
+        </form>
+    </div>
+<% end %>
