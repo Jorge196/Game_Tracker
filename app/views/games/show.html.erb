@@ -1,5 +1,5 @@
 <h1><%= @game.title %></h1> 
-<p><%= @game.gerne %></p> 
+<p><%= @game.genre %></p> 
 <p><%= @game.release_year %></p>
 <% if authorize_game(@game) %>
     <div>
@@ -9,4 +9,5 @@
             <input type= "submit" value="Delete" />
         </form>
     </div>
+
 <% end %>

@@ -6,6 +6,8 @@ class GamesController < ApplicationController
     end 
 
     get "/games/new" do 
+        redirect_if_not_logged_in
+        @game = Game.new
         erb :'/games/new.html'
     end 
 
@@ -18,7 +20,6 @@ class GamesController < ApplicationController
             erb :'/games/new.html'
         end 
     end 
-
 
 
     get "/games/:id" do 
