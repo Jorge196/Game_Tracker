@@ -1,3 +1,4 @@
+
 class GamesController < ApplicationController 
 
     get "/games" do 
@@ -12,12 +13,12 @@ class GamesController < ApplicationController
     end 
 
     post "/games" do 
-        redirect_if_not_logged_in 
-        @game = current_user.games.build(title: params[:game][:title], content: params[:game][:content])
-        if @game.save 
+        redirect_if_not_logged_in
+        @game = current_user.games.build(title: params[:game][:title], genre: params[:game][:genre], release_year: params[:game][:release_year])
+        if  @game.save
             redirect "/games"
         else 
-            erb :'/games/new.html'
+            erb :'/games/show.html'
         end 
     end 
 
@@ -28,7 +29,8 @@ class GamesController < ApplicationController
     end 
 
     get "/games/:id/edit" do 
-
+        @game = Game.find_by_id(params[:id])
+        erb :'/games/edit.html'
     end 
 
     patch "/games/:id" do

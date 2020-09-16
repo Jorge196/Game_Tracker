@@ -1,4 +1,21 @@
 <h1>Games</h1>
-<% @games.each do |game| %>
-<p><a href="/games/<%= game.id %>"><%= game.title %></a></p>
-<% end %>
+<div>
+<table>
+    <style>
+      th {width: 140px}
+      td {width: 150px}
+    </style>
+    <tr>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Year</th>
+    </tr>
+    <% @games.each do |game| %>
+        <tr>
+            <td><%= game.title %></td>
+            <td><%= game.genre %></td>
+            <td><%= game.release_year %></td>
+        </tr>
+    <%end%> 
+</table> 
+</div>
