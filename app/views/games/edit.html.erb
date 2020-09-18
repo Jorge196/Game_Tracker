@@ -1,7 +1,26 @@
 <h1>Edit Game</h1>
+<% if authorize_game(@game) %>
+    <form method="post" action="/games/<%= @game.id %>">
+        <input type="hidden" name="_method" value="patch">
+        <p>
+            <div><label for="title">Title</label></div>
+            <input id="title" type="text" name="game[title]" value="<%= @game.title %>" />
+        </p>
+        <p>
+            <div><label for="genre">Genre</label></div>
+            <input id="genre" type="text" name="game[genre]" value="<%= @game.genre %>" />
+        </p>
+        <p>
+            <div><label for="release_year">Year</label></div>
+            <input id="release_year" type="text" name="game[release_year]" value="<%= @game.release_year %>" />
+        </p>
+        <input type="submit" value="Update">
+    </form>
 
-<% if @game.errors.any? %>
-
-    <div id="error_explanation">
-        <h2><%= @game.errors.count %> error(s) prohibited this post from being saved:</h2>
-        
+    <form method="post" action="/games/<%= @game.id %>">
+        <input type="hidden" name="_method" value="delete" />
+        <input style="background-color: red;" type="submit" value="Delete Game Instead?" />
+    </form>
+<% else %>
+    <p> You are not authorized to edit this game! </p>
+<% end %>

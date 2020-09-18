@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
         user = User.find_by_email(params[:email])
         if user && user.authenticate(params[:password])
             session[:id] = user.id
-            redirect "/games/new.html"
+            redirect "/games"
         else 
             @error = "Incorrect email or password"
             erb :'/sessions/login'

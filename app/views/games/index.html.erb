@@ -1,6 +1,6 @@
 <h1>Games</h1>
 <nav> 
-    <a href="/games/new">New Game</a>
+    <a href="/games/new"><button>New Game<button></a>
 </nav>
 
 <div>
@@ -15,13 +15,16 @@
         <th>Title</th>
         <th>Genre</th>
         <th>Year</th>
+        <th>Edit</th>
     </tr>
     <% @games.each do |game| %>
         <tr>
             <td><%= game.title %></td>
             <td><%= game.genre %></td>
             <td><%= game.release_year %></td>
+            <td><a href="/games/<%= game.id %>/edit">Edit</td>
         </tr>
-    <%end%> 
+    <% end %> 
 </table> 
 </div>
+

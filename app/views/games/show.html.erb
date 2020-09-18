@@ -1,13 +1,10 @@
-<h1><%= @game.title %></h1> 
-<p><%= @game.genre %></p> 
-<p><%= @game.release_year %></p>
-<% if authorize_game(@game) %>
-    <div>
-        <a href="/games/<%= @game.id %>/edit"><button>Edit</button></a> 
-        <form method="post" action="/games/<%= @game.id %>" style="display: inline-block;">
-            <input type="hidden" name="_method" value="delete" />
-            <input type= "submit" value="Delete" />
-        </form>
-    </div>
+<h2>Game successfully updated</h2>
+<p>Title: <%= @game.title %></> 
+<p>Genre: <%= @game.genre %></p> 
+<p>Year: <%= @game.release_year %></p>
 
-<% end %>
+
+<div>
+    <a href="/games"><button>Back to all Games</button></a>
+</div>
+
