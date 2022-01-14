@@ -15,7 +15,10 @@ gem 'corneal', '~> 0.1.0'
 gem 'sinatra-flash'
 gem 'kill_shotgun'
 gem 'bigdecimal', '1.3.5'
+<<<<<<< HEAD
 gem 'addressable', '>= 2.8.0'
+=======
+>>>>>>> 6bd035bce8af2f2f6ad4ababb3e01cf40a18b437
 
 group :development, :test do 
 gem 'dotenv'

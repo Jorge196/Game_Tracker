@@ -2,7 +2,7 @@
 class GamesController < ApplicationController 
 
     get "/games" do 
-        @games = Game.where(["user_id = ?", current_user.id]).all
+        @games = Game.where(["user_id = ?", current_user.id]).all.order('title')
         erb :"/games/index.html"
     end 
 
