@@ -1,11 +1,11 @@
 source 'http://rubygems.org'
 
 gem 'sinatra'
-gem 'activerecord', '~> 4.2', '>= 4.2.6', :require => 'active_record'
-gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
+gem 'activerecord', '>= 7.0.1', :require => 'active_record'
+gem 'sinatra-activerecord', '>= 2.0.25', :require => 'sinatra/activerecord'
 gem 'rake'
 gem 'require_all'
-gem 'sqlite3', '~> 1.3.6'
+gem 'sqlite3', '~> 1.4'
 gem 'thin'
 gem 'shotgun'
 gem 'pry' 
@@ -14,6 +14,8 @@ gem 'tux'
 gem 'corneal', '~> 0.1.0'
 gem 'sinatra-flash'
 gem 'kill_shotgun'
+gem 'bigdecimal', '1.3.5'
+gem 'addressable', '>= 2.8.0'
 
 group :development, :test do 
 gem 'dotenv'
