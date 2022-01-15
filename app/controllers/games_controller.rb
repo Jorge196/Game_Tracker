@@ -2,6 +2,7 @@
 class GamesController < ApplicationController 
 
     get "/games" do 
+        redirect_if_not_logged_in
         @games = Game.where(["user_id = ?", current_user.id]).all.order('title')
         erb :"/games/index.html"
     end 
