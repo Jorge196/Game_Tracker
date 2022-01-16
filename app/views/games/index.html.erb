@@ -1,32 +1,33 @@
-<h1>Games</h1>
+<h1 style="color: #FF0000">Games</h1>
 <nav> 
-    <a href="/"><button>Home</button></a>
-    
-    <a href="/games/new"><button>New Game<button></a>
+    <a href="/"><button style="color: blue">Home</button></a>
+
+    <a href="/games/new"><button style="color: green">New Game<button></a>
 </nav>
 
 <div>
-<table>
-    <style>
-    table, th, td { border: 1px solid blue;
-    background-color: #0ac241}
-      th {width: 140px}
-      td {width: 150px}
-    </style>
-    <tr>
-        <th>Title</th>
-        <th>Genre</th>
-        <th>Year</th>
-        <th>Edit</th>
-    </tr>
+    <table>
+        <style>
+            table, th, td { border: 1px solid blue;
+            background-color: #00AC9F}
+            th {width: 140px}
+            td {width: 150px}
+        </style>
+        <tr style="color: #DF0024">
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Year</th>
+            <th>Edit</th>
+        </tr>
     <% @games.each do |game| %>
         <tr>
             <td><%= game.title %></td>
             <td><%= game.genre %></td>
             <td><%= game.release_year %></td>
-            <td><a href="/games/<%= game.id %>/edit">Edit</td>
+            <td><a href="/games/<%= game.id %>/edit"><button style="color: blue">Edit</button></a></td>
         </tr>
     <% end %> 
-</table> 
+</table>
+
 </div>
 
