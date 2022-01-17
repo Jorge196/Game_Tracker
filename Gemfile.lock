@@ -134,6 +134,7 @@ DEPENDENCIES
   dotenv
   kill_shotgun
   pry
+  rack
   rack-test
   rake
   require_all
