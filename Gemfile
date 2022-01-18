@@ -22,6 +22,7 @@ gem 'sqlite3'
 group :development, :test do 
 gem 'dotenv'
 gem 'session_secret_generator'
+gem 'sqlite3'
 
 end 
 
@@ -33,6 +34,5 @@ group :test do
 end
 
 group :production do 
-  # gem 'sqlite3'
   gem 'pg'
 end
