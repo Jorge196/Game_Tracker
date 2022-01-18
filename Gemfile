@@ -16,11 +16,12 @@ gem 'kill_shotgun'
 gem 'bigdecimal', '1.3.5'
 gem 'addressable', '2.8.0'
 gem 'rack'
+gem 'sqlite3'
+
 
 group :development, :test do 
 gem 'dotenv'
 gem 'session_secret_generator'
-gem 'sqlite3', '~> 1.4'
 
 end 
 
@@ -32,5 +33,5 @@ group :test do
 end
 
 group :production do 
-  gem 'pg'
+  gem 'sqlite3'
 end
