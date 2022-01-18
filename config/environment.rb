@@ -22,3 +22,8 @@ configure :production do
    :encoding => 'utf8'
  )
 end
+
+Dotenv.load
+
+require './app/controllers/application_controller'
+require_all 'app'
