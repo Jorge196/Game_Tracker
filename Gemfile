@@ -5,7 +5,6 @@ gem 'activerecord', '>= 7.0.1', :require => 'active_record'
 gem 'sinatra-activerecord', '>= 2.0.25', :require => 'sinatra/activerecord'
 gem 'rake'
 gem 'require_all'
-gem 'sqlite3', '~> 1.4'
 gem 'thin'
 gem 'shotgun'
 gem 'pry' 
@@ -21,6 +20,8 @@ gem 'rack'
 group :development, :test do 
 gem 'dotenv'
 gem 'session_secret_generator'
+gem 'sqlite3', '~> 1.4'
+
 end 
 
 group :test do
@@ -28,4 +29,8 @@ group :test do
   gem 'capybara'
   gem 'rack-test'
   gem 'database_cleaner', git: 'https://github.com/bmabey/database_cleaner.git'
+end
+
+group :production do 
+  gem 'pg'
 end
