@@ -16,7 +16,6 @@ gem 'kill_shotgun'
 gem 'bigdecimal', '1.3.5'
 gem 'addressable', '2.8.0'
 gem 'rack'
-gem 'sqlite3'
 
 
 group :development, :test do 
