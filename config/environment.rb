@@ -23,7 +23,7 @@ configure :production do
  )
 end
 
-Dotenv.load
+# Dotenv.load
 
 require './app/controllers/application_controller'
 require_all 'app'
